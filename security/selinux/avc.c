@@ -450,8 +450,8 @@ static void avc_audit_post_callback(struct audit_buffer *ab, void *a)
 	if (ad->selinux_audit_data->denied) {
 		audit_log_format(ab, " permissive=%u",
 				 ad->selinux_audit_data->result ? 0 : 1);
-		#ifdef CONFIG_MTK_AEE_FEATURE				 
-		{		 
+		#ifdef CONFIG_MTK_AEE_FEATURE
+		{
 			int rc;
 			char *scontext;
 			u32 scontext_len;
